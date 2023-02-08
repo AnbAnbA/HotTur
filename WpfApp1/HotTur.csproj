@@ -89,6 +89,7 @@
     <Compile Include="Pages\ShowMP.xaml.cs">
       <DependentUpon>ShowMP.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PartialTour.cs" />
     <Compile Include="Tour.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

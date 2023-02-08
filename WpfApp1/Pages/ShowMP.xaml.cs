@@ -25,5 +25,10 @@ namespace WpfApp1.Pages
             InitializeComponent();
             LVH.ItemsSource=Base.EH.Tour.ToList();
         }
+
+        private void tbSear_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
