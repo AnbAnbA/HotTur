@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WpfApp1.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="900" d:DesignWidth="1200"
+      d:DesignHeight="950" d:DesignWidth="1100"
       Title="ShowMP">
     <Page.Resources>
         <BitmapImage x:Key="defaultImage" UriSource="/Res/picture.png"/>
@@ -14,10 +14,19 @@
     <Grid>
         <StackPanel>
             <TextBlock Text="Туры" HorizontalAlignment="Center" FontSize="25"></TextBlock>
-            <StackPanel>
-                <TextBlock Text="Введите текст для поика"></TextBlock>
-                <TextBox Name="tbSear" TextChanged="tbSear_TextChanged"/>
+            <StackPanel >
+                <TextBlock Text="Введите текст для поика" FontSize="18" Margin="140,0,0,0"></TextBlock>
+                <TextBox Name="tbSear" TextChanged="tbSear_TextChanged" Width="650" Margin="260,-18,0,0" />
             </StackPanel>
+            <TextBlock Text="Выберите тип" FontSize="18" Margin="140,10,0,0"></TextBlock>
+            <ComboBox Name="cbt" SelectionChanged="cbt_SelectionChanged" Width="350" Margin="0,-20,280,0"></ComboBox>
+            <ComboBox Name="cmbSort" SelectionChanged="cbt_SelectionChanged" Width="350" Margin="550,-22,0,0">
+                <ComboBoxItem>Без сотрировки</ComboBoxItem>
+                <ComboBoxItem>По возрастанию цены</ComboBoxItem>
+                <ComboBoxItem>По убыванию цены</ComboBoxItem>
+            </ComboBox>
+            <CheckBox Name="cbAc" Content="Только актуальные туры" FontSize="22" Margin="18" Checked="cbAc_Checked" Unchecked="cbAc_Checked" HorizontalAlignment="Center"/>
+            <TextBlock Name="tbcost" Width="290" Height="20" Margin="0,-60,40,0" HorizontalAlignment="Right"/>
         </StackPanel>
         <ListView Name="LVH" ScrollViewer.HorizontalScrollBarVisibility="Disabled"  Height="650" >
             <ListView.ItemsPanel>
@@ -41,5 +50,6 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <Button Name="btnH" Content="Отели" FontSize="29" Click="btnH_Click" Margin="0,750,0,0" Width="240" Height="45"></Button>
     </Grid>
 </Page>

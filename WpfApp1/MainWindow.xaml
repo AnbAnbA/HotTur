@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Путешествуй по России" Height="1000" Width="1300">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="35"></RowDefinition>
@@ -14,7 +14,7 @@
         
         <Grid Grid.Row="1">
             <StackPanel>
-                <Frame x:Name="frameM" NavigationUIVisibility="Hidden" Height="375" Width="791"/>
+                <Frame x:Name="frameM" NavigationUIVisibility="Hidden" Height="1000" Width="1300"/>
             </StackPanel>
         </Grid>
     </Grid>
